@@ -1,0 +1,144 @@
+.similar-artists {
+    width: 100%; 
+    max-width: 1500px; 
+    background-color: #121212; 
+    color: white;
+    box-sizing: border-box; 
+    position: relative; 
+    padding: 20px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    transition: padding 0.3s ease; 
+}
+
+
+.carousel-controls {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    display: flex;
+    gap: 10px;
+}
+
+/* btns */
+.carousel-button {
+    background-color: #202020;
+    border: none;
+    color: white;
+    font-size: 10px; 
+    width: 30px; 
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%; 
+    transition: background-color 0.3s ease; 
+}
+
+.carousel-button:hover {
+    background-color: #333333; 
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 20px; 
+}
+
+
+.user-image {
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease; 
+}
+
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: font-size 0.3s ease; 
+}
+
+
+.artists-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: center; 
+}
+
+
+.artist-card {
+    width: calc(25% - 20px); 
+    box-sizing: border-box;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+
+.artist-image {
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: width 0.3s ease, height 0.3s ease; 
+}
+
+
+.artist-name {
+    font-size: 14px;
+    color: #dddddd; 
+    transition: font-size 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .artist-card {
+        width: calc(33.33% - 20px); 
+    }
+
+    .artist-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .section-title {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .artist-card {
+        width: calc(50% - 20px); 
+    }
+
+    .artist-image {
+        width: 70px; 
+        height: 70px;
+    }
+
+    .section-title {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-card {
+        width: 100%; 
+    }
+
+    .artist-image {
+        width: 60px; 
+        height: 60px;
+    }
+
+    .section-title {
+        font-size: 12px; 
+    }
+}
