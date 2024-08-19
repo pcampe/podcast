@@ -1,0 +1,122 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #202020;
+  color: white;
+  width: 100vw; 
+  box-sizing: border-box;
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  z-index: 10; 
+}
+
+/* izq */
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; 
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.youtube-logo {
+  width: 120px; 
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+/* centro */
+.center-section {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #645d5d;
+  transition: max-width 0.3s ease, padding 0.3s ease;
+}
+
+/* derecha */
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease; 
+}
+
+/* Respons */
+@media (max-width: 1024px) {
+  .youtube-logo {
+    width: 100px;
+  }
+
+  .search-bar {
+    max-width: 300px;
+    padding: 4px;
+  }
+
+  .profile-image {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .youtube-logo {
+    width: 80px;
+  }
+
+  .search-bar {
+    max-width: 250px;
+    padding: 3px;
+  }
+
+  .profile-image {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .youtube-logo {
+    width: 60px;
+  }
+
+  .search-bar {
+    max-width: 200px;
+    padding: 2px;
+  }
+
+  .profile-image {
+    width: 25px;
+    height: 25px;
+  }
+}

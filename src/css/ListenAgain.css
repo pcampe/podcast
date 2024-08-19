@@ -1,0 +1,127 @@
+.listen-again {
+    width: 100%;
+    max-width: 900px;
+    background-color: #121212;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: padding 0.3s ease;
+    max-width: 1500px;
+}
+
+/* carouusel */
+.carousel-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* btns del carrusel */
+.carousel-button {
+    background-color: #202020;
+    border: none;
+    color: white;
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #333333;
+}
+
+/* user */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* lista de rep */
+.playlists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.playlist-card {
+    width: calc(25% - 10px);
+    box-sizing: border-box;
+    text-align: center;
+    transition: width 0.3s ease;
+}
+
+/* img del álbum */
+.playlist-image {
+    width: 50%; 
+    height: auto;
+    border-radius: 4px;
+    transition: width 0.3s ease; 
+}
+
+/* Media Queries-Respons */
+@media (max-width: 1024px) {
+    .playlist-card {
+        width: calc(33.33% - 10px);
+    }
+
+    .user-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .playlist-image {
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    .playlist-card {
+        width: calc(50% - 10px);
+    }
+
+    .user-image {
+        width: 25px; 
+        height: 25px;
+    }
+
+    .playlist-image {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .playlist-card {
+        width: 100%; 
+    }
+
+    .user-image {
+        width: 20px;
+        height: 20px;
+    }
+
+    .playlist-image {
+        width: 90%; 
+    }
+}
