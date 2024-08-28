@@ -26,6 +26,7 @@ const VerticalNBar: React.FC<VerticalNBarProps> = ({ newPlaylists }) => {
         <a href="/">
           <img src={icons.home} alt="Home" className="home-icon" />
         </a>
+        <a href='/'><span className="home-text">Home</span></a> 
       </div>
       <button className="new-playlist-button" onClick={handleNewPlaylistClick}>
         <img src={icons.newPlaylist} alt="New Playlist" className="new-playlist-icon" />

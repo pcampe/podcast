@@ -11,29 +11,36 @@
   top: 0;
   left: 0;
   z-index: 10;
+  box-sizing: border-box;
 }
 
 .home-icon-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  margin-top: 70px;
 }
 
 .home-icon {
-  margin-top: 60px;
   width: 40px;
   height: 40px;
   transition: width 0.3s ease, height 0.3s ease;
   cursor: pointer;
 }
 
-.new-playlist-button {
-  background-color: gray;
+.home-text {
+  margin-left: 10px;
+  font-size: 25px;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+}
+
+.new-playlist-button {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -42,22 +49,12 @@
   width: 80%;
 }
 
-.new-playlist-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
 .new-playlist-icon {
-  width: 20px; /* ajusta el icono */
+  width: 20px;
   height: 20px;
   margin-right: 10px;
 }
+
 .playlist-list {
   margin-top: 20px;
   display: flex;
@@ -71,30 +68,28 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  margin-left: 20px;
 }
+
 .playlist-thumbnail {
-  width: 60px; /* ajusta el tamaño  de la imagen */
+  width: 60px;
   height: 60px;
-  object-fit: cover; 
-  margin-right: 10px;
-  
+  object-fit: cover;
+  margin-right: 5%;
+  margin-left: 10%;
 }
 
 .playlist-item div {
   flex: 1;
-  
 }
 
 .playlist-item h4 {
   margin: 0;
-  font-size: 14px; /* ajusta el título */
-  
+  font-size: 14px;
 }
 
 .playlist-item p {
   margin: 0;
-  font-size: 12px; /* ajusta la descrip */
+  font-size: 12px;
 }
 
 .no-playlists {
@@ -113,4 +108,47 @@
 .playlist-details {
   display: flex;
   flex-direction: column;
+}
+
+/* Media Queries - Responsive Design */
+@media (max-width: 1024px) {
+  .vertical-n-bar {
+    width: 15%;
+  }
+
+  .home-text {
+    font-size: 20px;
+  }
+
+  .new-playlist-button {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vertical-n-bar {
+    width: 20%;
+  }
+
+  .home-text {
+    font-size: 18px;
+  }
+
+  .new-playlist-button {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-n-bar {
+    width: 25%;
+  }
+
+  .home-text {
+    font-size: 16px;
+  }
+
+  .new-playlist-button {
+    width: 100%;
+  }
 }
