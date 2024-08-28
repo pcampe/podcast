@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/CreatePlaylist.css';
 
@@ -13,6 +13,10 @@ const CreatePlaylist: React.FC<CreatePlaylistProps> = ({ addPlaylist }) => {
   const [isFormValid, setIsFormValid] = useState(false);
   const navigate = useNavigate();
 
+  useEffect(() => {
+    validateForm();
+  }, [title, description, imageUrl]); // Re-evaluate form validity when any input changes
+
   const validateForm = () => {
     setIsFormValid(title !== '' && description !== '' && imageUrl !== '');
   };
@@ -22,7 +26,6 @@ const CreatePlaylist: React.FC<CreatePlaylistProps> = ({ addPlaylist }) => {
     if (name === 'title') setTitle(value);
     if (name === 'description') setDescription(value);
     if (name === 'imageUrl') setImageUrl(value);
-    validateForm();
   };
 
   const handleSubmit = (e: React.FormEvent) => {
