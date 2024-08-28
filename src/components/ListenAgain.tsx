@@ -6,9 +6,14 @@ interface User {
   profileImage: string;
 }
 
+interface Playlist {
+  image: string;
+  name: string;
+}
+
 interface ListenAgainProps {
   user: User;
-  playlists: { image: string; name: string }[];
+  playlists: Playlist[];
 }
 
 const ListenAgain: React.FC<ListenAgainProps> = ({ user, playlists }) => {
@@ -25,12 +30,16 @@ const ListenAgain: React.FC<ListenAgainProps> = ({ user, playlists }) => {
         <button className="carousel-button next-button">❯</button>
       </div>
       <div className="playlists">
-        {playlists.map((playlist, index) => (
-          <div key={index} className="playlist-card">
-            <img src={playlist.image} alt={playlist.name} className="playlist-image" />
-            <p className="playlist-name">{playlist.name}</p>
-          </div>
-        ))}
+        {playlists.length > 0 ? (
+          playlists.map((playlist, index) => (
+            <div key={index} className="playlist-card">
+              <img src={playlist.image} alt={playlist.name} className="playlist-image" />
+              <p className="playlist-name">{playlist.name}</p>
+            </div>
+          ))
+        ) : (
+          <p className="no-playlists">No playlists available</p>
+        )}
       </div>
     </section>
   );

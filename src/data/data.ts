@@ -80,8 +80,15 @@ export const recommendedAlbums = [
 
 ];
 
-import homeIcon from '../assets/images/home.png';
+
+
+
+import homeIcon from '../assets/images/home.png'
+import newPlaylistIcon from '../assets/images/new-playlist.png'
 
 export const icons = {
     home: homeIcon,
+    newPlaylist: newPlaylistIcon,
 };
+
+

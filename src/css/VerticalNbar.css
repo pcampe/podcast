@@ -1,86 +1,116 @@
-/* Estilo general de la barra vertical */
 .vertical-n-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-    background-color: #202020; /* Color de fondo de la barra vertical */
-    color: white;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
-    width: 60px; /* Ancho de la barra vertical */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10; /* Asegura que la barra esté sobre otros elementos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #202020;
+  color: white;
+  height: 100vh;
+  width: 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-/* Contenedor del ícono de home */
 .home-icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px; /* Espaciado inferior para separar del contenido siguiente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-/* Estilo del ícono de home */
 .home-icon {
-    width: 40px; /* Tamaño aumentado del ícono */
-    height: 40px;
-    transition: width 0.3s ease, height 0.3s ease; /* Transición para el cambio de tamaño */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-left:1px;
-    margin-top:65px;
+  margin-top: 60px;
+  width: 40px;
+  height: 40px;
+  transition: width 0.3s ease, height 0.3s ease;
+  cursor: pointer;
 }
 
-
-
-
-
-/* Responsividad */
-@media (max-width: 1024px) {
-    .vertical-n-bar {
-        width: 50px; /* Ajusta el ancho para pantallas más pequeñas */
-    }
-
-    .home-icon {
-        width: 25px; /* Tamaño del ícono en pantallas medianas */
-        height: 25px;
-    }
-
-    .home-icon:hover {
-        width: 30px; /* Tamaño aumentado al pasar el ratón por encima en pantallas medianas */
-        height: 30px;
-    }
+.new-playlist-button {
+  background-color: gray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 80%;
 }
 
-@media (max-width: 768px) {
-    .vertical-n-bar {
-        width: 40px; /* Ajusta el ancho para pantallas pequeñas */
-    }
-
-    .home-icon {
-        width: 20px; /* Tamaño del ícono en pantallas pequeñas */
-        height: 20px;
-    }
-
-    .home-icon:hover {
-        width: 25px; /* Tamaño aumentado al pasar el ratón por encima en pantallas pequeñas */
-        height: 25px;
-    }
+.new-playlist-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-@media (max-width: 480px) {
-    .vertical-n-bar {
-        width: 30px; /* Ajusta el ancho para pantallas muy pequeñas */
-    }
+.new-playlist-icon {
+  width: 20px; /* ajusta el icono */
+  height: 20px;
+  margin-right: 10px;
+}
+.playlist-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  overflow-y: auto;
+}
 
-    .home-icon {
-        width: 15px; /* Tamaño del ícono en pantallas muy pequeñas */
-        height: 15px;
-    }
+.playlist-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.playlist-thumbnail {
+  width: 60px; /* ajusta el tamaño  de la imagen */
+  height: 60px;
+  object-fit: cover; 
+  margin-right: 10px;
+  
+}
 
-    .home-icon:hover {
-        width: 20px; /* Tamaño aumentado al pasar el ratón por encima en pantallas muy pequeñas */
-        height: 20px;
-    }
+.playlist-item div {
+  flex: 1;
+  
+}
+
+.playlist-item h4 {
+  margin: 0;
+  font-size: 14px; /* ajusta el título */
+  
+}
+
+.playlist-item p {
+  margin: 0;
+  font-size: 12px; /* ajusta la descrip */
+}
+
+.no-playlists {
+  color: #999;
+  margin-left: 10px;
+}
+
+.playlist1-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.playlist-details {
+  display: flex;
+  flex-direction: column;
 }
